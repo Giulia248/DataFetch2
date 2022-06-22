@@ -54,21 +54,7 @@ struct ContentView: View {
                 Text("Clear").foregroundColor(CustomColor.verde).padding().font(.system(size: 30)).overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.black, lineWidth: 5))
 
             }.offset(x: 0, y: 225)
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+   
         }
     }
 }
