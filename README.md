@@ -9,9 +9,14 @@ Data Fetch of random people API and random houses
         }
 
         //decoded json file
-        let (data, _) = try await URLSession.shared.data(from: URL(string:"https://api.namefake.com")!)
-        let decodedResponse = try? JSONDecoder().decode(Human.self, from: data)
-        person = "\(decodedResponse?.name ?? " ")"
+         Task {
+                        let (data, _) = try await URLSession.shared.data(from: URL(string:"https://api.namefake.com")!)
+                        let decodedResponse = try? JSONDecoder().decode(Human.self, from: data)
+                        person = "\(decodedResponse?.name ?? " ")"
+                        person2 = "address :\(decodedResponse?.address ?? " ")"
+                        print(person)
+                        
+                    }
 
 
 '''
